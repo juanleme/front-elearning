@@ -1,0 +1,17 @@
+{
+  "id": 1,
+  "timer": 100,
+  "teams": [
+    {
+      "id": 1,
+      "name": "INTZ",
+      "logo": "assets/img/intz.png"
+
+    },
+    {
+      "id": 2,
+      "name": "Kabum",
+      "logo": "assets/img/kabum.png"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "timer": 45678,
+    "teams": [
+      {
+        "id": 1,
+        "field": 3,
+        "points": 600,
+        "name": "Pain Gaming",
+        "logo": "assets/img/pain.png"
+      },
+      {
+        "id": 2,
+        "field": 6,
+        "points": 2700,
+        "name": "SKT Telecom",
+        "logo": "assets/img/skt.png"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "timer": 850,
+    "teams": [
+      {
+        "id": 1,
+        "field": 3,
+        "points": 2000,
+        "name": "Pain Gaming",
+        "logo": "assets/img/pain.png"
+      },
+      {
+        "id": 2,
+        "field": 6,
+        "points": 570,
+        "name": "INTZ",
+        "logo": "assets/img/intz.png"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "timer": 640,
+    "teams": [
+      {
+        "id": 1,
+        "field": 3,
+        "points": 2000,
+        "name": "Curse",
+        "logo": "assets/img/curse.png"
+      },
+      {
+        "id": 2,
+        "field": 6,
+        "points": 10000,
+        "name": "Kabum",
+        "logo": "assets/img/kabum.png"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "timer": 10000,
+    "teams": [
+      {
+        "id": 1,
+        "field": 3,
+        "points": 8654,
+        "name": "Cloud 9",
+        "logo": "assets/img/cloud9.png"
+      },
+      {
+        "id": 2,
+        "field": 6,
+        "points": 2700,
+        "name": "Vulcun",
+        "logo": "assets/img/vulcun.png"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "timer": 987,
+    "teams": [
+      {
+        "id": 1,
+        "field": 3,
+        "points": 100,
+        "name": "Keyd",
+        "logo": "assets/img/keyd.png"
+      },
+      {
+        "id": 2,
+        "field": 6,
+        "points": 2700,
+        "name": "SKT Telecom",
+        "logo": "assets/img/skt.png"
+      }
+    ]
+  }
+]

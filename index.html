@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="ge">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GE</title>
+    <link href="assets/css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <header ui-header></header>
+    <section>
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="row">
+            <div ui-view></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer ui-footer>
+    </footer>
+    <script src="assets/libs/angular.min.js"></script>
+    <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+
+    <script src="node_modules/videogular/videogular.js"></script>
+    <script src="node_modules/videogular-controls/vg-controls.js"></script>
+    <script src="node_modules/videogular-overlay-play/vg-overlay-play.js"></script>
+    <script src="node_modules/videogular-poster/vg-poster.js"></script>
+    <script src="node_modules/videogular-buffering/vg-buffering.js"></script>
+    <script src="assets/libs/angular-ui-router.min.js"></script>
+    <script src="assets/libs/ui-bootstrap-1.1.1.min.js"></script>
+
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/shared/header/header.directive.js"></script>
+    <script src="app/shared/footer/footer.directive.js"></script>
+    <script src="app/components/panel/panel.controller.js"></script>
+    <script src="app/components/panel/panel.service.js"></script>
+  </body>
+</html>
