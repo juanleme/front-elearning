@@ -1,13 +1,9 @@
-# FRONT-END - Sistema de Apostas eSport#
-
-
-O conteúdo deste repositório é referente ao sistema em Angular JS que será responsável por gerenciar o conteúdo web disponível no sistema.
+# FRONT-END - Sistema Gamification e-learning#
 
 
 **Dependências do projeto**
 
 * NodeJS
-* HTTP Server
 
 
 **Instalação**
