@@ -1,4 +1,4 @@
-# FRONT-END - Sistema Gamification e-learning#
+# FRONT-END - Sistema e-learning#
 
 
 **Dependências do projeto**
