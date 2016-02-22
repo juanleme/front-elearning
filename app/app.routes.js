@@ -1,24 +1,22 @@
 (function() {
     'use strict'
 
-      angular.module('ge.routes', ['ui.router'])
+      angular.module('el.routes', ['ui.router'])
 
       .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+        
+        $urlRouterProvider.otherwise('/cursos');
 
-      $urlRouterProvider.otherwise('/');
-
-      $stateProvider
-      .state('panel', {
-        url: '/',
-        templateUrl: 'app/components/panel/panel.view.html',
-        controller: 'PanelController'
-      });
-
-        if(window.history && window.history.pushState){
-          $locationProvider.html5Mode({
-                 enabled: true,
-                 requireBase: false
-          });
-        }
+        $stateProvider
+        .state('courses', {
+          url: '/cursos',
+          templateUrl: 'app/components/courses/courses.view.html',
+          controller: 'CoursesController'
+        })
+        .state('videos', {
+          url: '/cursos/:id/aulas',
+          templateUrl: 'app/components/videos/videos.view.html',
+          controller: 'VideosController'
+        });
       });
 })();

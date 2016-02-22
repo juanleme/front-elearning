@@ -1,16 +1,18 @@
 (function() {
     'use strict';
 
-    angular.module('ge', [
+    angular.module('el', [
       // Core dependency Injection
-      'ge.routes',
+      'el.routes',
 
       // Components dependency Injection
-      'ge.panel',
+      'el.courses',
+      'el.videos',
 
       //Shared dependency Injection
-      'ge.header',
-      'ge.footer'
+      'el.header',
+      'el.footer',
+      'ngSanitize'
     ]);
 
 })();

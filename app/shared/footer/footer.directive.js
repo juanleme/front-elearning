@@ -1,7 +1,7 @@
 (function() {
     'use strict'
 
-    angular.module('ge.footer', [])
+    angular.module('el.footer', [])
 
     .directive('uiFooter', function () {
         return {

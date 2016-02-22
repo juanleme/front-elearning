@@ -1,7 +1,7 @@
 (function() {
     'use strict'
 
-    angular.module('ge.header', [])
+    angular.module('el.header', [])
 
     .directive('uiHeader', function () {
         return {
