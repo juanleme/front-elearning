@@ -1,4 +1,4 @@
-# FRONT-END - Sistema e-learning#
+# FRONT-END - Sistema e-learning desenvolvido para Graduação#
 
 
 **Dependências do projeto**
@@ -36,4 +36,3 @@ gulp server
 **Coisas que eu usei para facilitar a vida**
 
 Cmder para uma melhor experiência com o prompt de comando do Windows [http://cmder.net/](Link URL)  
-GNUWin32 para executar comandos do linux no windows [http://getgnuwin32.sourceforge.net/](Link URL)
