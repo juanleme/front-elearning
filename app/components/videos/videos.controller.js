@@ -15,10 +15,6 @@
 			var video = this;
 			video.API = null;
 
-			video.onPlayerReady = function(API) {
-				video.API = API;
-			};
-
 			video.videos = [
 				{
 					poster: "http://www.videogular.com/assets/images/videogular.png",
@@ -26,14 +22,6 @@
 						{
 							src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.mp4"), 
 							type: "video/mp4"
-						},
-						{
-							src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.webm"), 
-							type: "video/webm"
-						},
-						{
-							src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.ogg"), 
-							type: "video/ogg"
 						}
 					]
 				},
@@ -43,10 +31,6 @@
 						{
 							src: $sce.trustAsResourceUrl("http://www.videogular.com/assets/videos/big_buck_bunny_720p_h264.mov"), 
 							type: "video/mp4"
-						},
-						{
-							src: $sce.trustAsResourceUrl("http://www.videogular.com/assets/videos/big_buck_bunny_720p_stereo.ogg"), 
-							type: "video/ogg"
 						}
 					]
 				}
@@ -64,6 +48,10 @@
 				plugins: {
 					poster: "http://www.videogular.com/assets/images/videogular.png"
 				}
+			};
+			
+			video.onPlayerReady = function(API) {
+				video.API = API;
 			};
 
 			video.setVideo = function(index) {

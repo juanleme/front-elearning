@@ -1,29 +1,27 @@
 (function() {
-    'use strict'
+    'use strict';
 
     angular.module('el.courses')
+    .factory('CoursesService', CoursesService);
 
-    .factory('CoursesService', function($http) {
-		var courses;
+	CoursesService.$inject = ['$http', '$log', 'SERVER_URL'];
 
+    function CoursesService ($http, $log, SERVER_URL) {
     	return {
-        	listCourse: function() {       		
-
-	          	if (!courses) {
-
-	      			courses = $http.get('http://localhost:8080/api-elearning/public/api/courses').then(
-	      				function(response) {
-							return response.data;
-			    		},
-				    	function(error) {
-				    		console.log("Failed: " + error); 
-				    	}
-				    );
-	      		}else{
-	      			console.log("Data: cache");
-	      		}
-	    		return courses;
-    		}
+        	listCourses: getCourses
     	};
-	});
+
+    	function getCourses() {
+    		return $http.get(SERVER_URL + 'api/courses')
+	    		.then(getCompleted)
+    			.catch(getFailed);
+    	}
+    	function getCompleted(response) {
+            return response.data;
+    	}
+    	function getFailed(error) {
+    		$log.error('XHR Failed data: '+ error);
+    	}
+	}
+
 })();

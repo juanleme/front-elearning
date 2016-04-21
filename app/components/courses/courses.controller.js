@@ -2,12 +2,27 @@
     'use strict'
 
     angular.module('el.courses', [])
+	.controller('CoursesController', CoursesController);
 
-    .controller('CoursesController', ['$scope', 'CoursesService',
-      function($scope, CoursesService) {
-      	CoursesService.listCourse().then(function(response){
-      		$scope.courses = response;
-      	});
-      }
-    ]);
+	CoursesController.$inject = ['CoursesService', '$log'];
+
+	function CoursesController (CoursesService, $log) {
+		var vm = this;
+		vm.courses = [];
+		vm.listCourses = listCourses;
+
+		activate();
+
+	    function activate() {
+	    	return listCourses();
+	    }
+	    function listCourses() {
+        	return CoursesService.listCourses().then(function(data) {
+            	vm.courses = data;
+            	return vm.courses;
+        });
+    }
+
+	}
+
 })();
