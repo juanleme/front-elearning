@@ -1,8 +1,34 @@
-<div class="wrapper">
-  <form class="form-signin" ng-submit="vm.submit()">       
-    <h2 class="form-signin-heading">Bem vindo! <small>Acesse agora mesmo seu conteúdo exclusivo!</small></h2>
-    <input type="text" class="form-control" name="username" placeholder="Email Address" ng-model="vm.credentials.email" />
-    <input type="password" class="form-control" name="password" placeholder="Password" ng-model="vm.credentials.password" />
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
-  </form>
+<div class="container">
+	<div class="col-sm-12">
+		<div class="row">
+			<div class="container">
+				<div class="col-xs-12">
+					<div class="logo">
+						<img src="assets/img/logo.png" alt="WebTricks"class="img-responsive" />
+					</div>
+				</div>
+			</div>
+			<div class="wrapper">
+				<form class="form-signin" name="loginForm" ng-submit="vm.submit()" novalidate>       
+					<h2 class="form-signin-heading">Bem vindo! <small>Acesse agora mesmo e descubra os segredos de WebTricks!</small></h2>
+					<input type="email" class="form-control" name="email" placeholder="Digite seu e-mail" ng-model="vm.credentials.email" ng-model-options="{ updateOn: 'default blur', debounce: { default: 500, blur: 0 } }" required />		
+					<input type="password" minlength="3" class="form-control" name="password" placeholder="Digite sua senha" ng-model="vm.credentials.password" required/>
+					<p class="error-message">
+						<span ng-show="loginForm.email.$error.email">Endereço de e-mail invalido.<br></span>
+						<span ng-show="loginForm.password.$error.minlength">A senha deve ter no mínimo 3 caracteres.<br></span>
+						<span class="server-error">{{ vm.error }}</span>
+					</p>
+					<button class="btn btn-lg btn-primary btn-block btn-common" type="submit" ng-disabled="loginForm.$pristine|| loginForm.$invalid">Entrar</button>   
+					<button class="btn btn-lg btn-primary btn-block btn-light">Cadastre-se</button>   
+				</form>
+			</div>
+			<div class="container">
+				<div class="col-xs-12">
+					<div class="row">
+			    		<p class="license">The MIT License (MIT) 2016 &copy; Juan Pinheiro</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

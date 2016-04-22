@@ -9,11 +9,11 @@
 	function LoginController (LoginService, $log, $cookies, $state) {
 		var vm = this;
 
+		vm.error = '';
 		vm.credentials = {
 			email: '',
 			password: ''
 		};
-		
 		vm.submit = submit;
 
 		function submit () {
@@ -25,6 +25,8 @@
         		if(typeof data === 'object'){
         			$cookies.putObject('user', data);
         			$state.go('courses');
+            	}else if(data){
+            		vm.error = data;
             	}
         	});
     	}

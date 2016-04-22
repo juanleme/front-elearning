@@ -1,26 +1,22 @@
-<div class="row">
-	<div class="col-sm-12">
-		<h3 class="page-header">Cursos</h3>
-		<div class="courses">
-			<div class="row">
-			  	<div class="col-lg-3 col-md-6" ng-repeat="course in vm.courses">
-					<div class="panel panel-default">
-						<div class="panel-body">
+<header ui-header></header>
+<section class="bg-white">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h3 class="main-title">SELECIONE O CURSO QUE DESEJA ASSISTIR!</h3>
+				<div class="courses">
+					<div class="row">
+					  	<div class="col-lg-3 col-md-6" ng-repeat="course in vm.courses">
 				  			<a href="#/cursos/{{ course._id }}/aulas">
 				  				<img src="{{ course.image }}" alt="{{ course.title }}" class="img-responsive" />
 				  			</a>
 							<h4><a href="#/cursos/{{ course._id }}/aulas">{{ course.title }}</a></h4>
 							<p>{{ course.description }}</p>
-						</div>  		
-		  			</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<style type="text/css">
-	.courses .panel .panel-body p{
-		overflow: hidden;
-    	height: 80px;
-	}	
-</style>
+</section>
+<footer ui-footer>

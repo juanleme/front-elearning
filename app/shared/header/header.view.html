@@ -1,7 +1,19 @@
-<nav class="navbar navbar-custom" role="navigation">
+<nav class="nav-header">
   <div class="container">
-    <div class="navbar-header">
-        <a class="navbar-brand">Elearning</a>
-    </div>
+  	<div class="col-sm-8">
+  		<div class="row">
+  			<div>    
+  				<a href="#/cursos" class="header-brand"><img src="assets/img/logo.png" alt="Web Tricks" class="img-responsive"></a>
+  			</div>
+  		</div>
+  	</div>
+  	<div class="col-sm-4">
+  		<div class="row">
+  			<div class="welcome pull-right text-right">
+  				<p><i class="fa fa-user" aria-hidden="true"></i> Seja bem vindo <b>{{ username }}</b></p>
+  				<p><a ng-click="logout()"><i class="fa fa-times" aria-hidden="true"></i> <b>Sair</b></a></p>
+  			</div>
+  		</div>
+  	</div>  
   </div>
 </nav>

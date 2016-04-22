@@ -18,14 +18,18 @@
                 .catch(getFailed);
         }
         
-        function logout () {
-            return $http.post(SERVER_URL + 'api/users/auth', credentials)
-                .then(getCompleted)
+        function logout (user_id, token) {
+            return $http.post(SERVER_URL + 'api/users/'+ user_id + '/logout?token='+token)
+                .then(getStatus)
                 .catch(getFailed);
         }
 
         function getCompleted (response) {
             return response.data;
+        }
+        function getStatus (response) {
+            console.log(response);
+            return response.status;
         }
         function getFailed (error) {
             return $log.error(error);

@@ -5,13 +5,51 @@
 .playlist ul {
 	list-style-type: none;
 }
-
+.nav-header{
+	border-bottom: solid 3px #C76464;
+	padding: 5px 0 15px;
+		.header-brand{
+			display: table;
+			img{
+				width: 200px
+			}
+	}	
+}
 .playlist ul a {
 	cursor: pointer;
 	color: #428bca;
 	text-decoration: none;
 }
-
+.align-middle{
+	display: table-cell;
+    height: 120px;
+    vertical-align: middle;
+}
+.bg-white{
+	background-color: white;
+	padding-bottom: 40px;
+}
+.main-title{
+	margin: 30px 0 45px;
+}
+.welcome{
+	color: #fff;
+	padding-top: 40px;
+	a{
+		color: #fff;
+		&:hover{
+			color: #fff;
+			cursor: pointer;
+		}
+	}
+}
+.footer{
+	padding: 40px 0 40px;
+	background-color: #FBFBFB;
+	color: #908E8E;
+	border-top: 3px solid #F5F5F5;
+	border-bottom: 3px solid #F5F5F5;
+}
 .playlist ul a:visited {
 	color: #428bca;
 }
@@ -20,7 +58,10 @@
 	color: #428bca;
 	text-decoration: underline;
 }
-
+.courses .panel .panel-body p{
+	overflow: hidden;
+	height: 80px;
+}	
 .videogular-container .skipButton {
 	position: absolute;
 	padding: 10px;
@@ -37,13 +78,54 @@
 	-ms-border-radius: 10px;
 	border-radius: 10px;
 }
+body{
+	background-color: #f56b6b;
+	font-family: 'Open Sans', sans-serif;
+
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.license{
+	text-align: center;
+	magin: 0 auto;
+	color: #fff;
+}
+.logo{
+	img{
+	    max-width: 350px;
+	    width: 100%;
+	    margin: 0 auto;	
+	}
+}
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn{
+	opacity: .3;
+}
+p.error-message{
+	color: #B93838;
+    font-weight: 600;
+}
+.btn-common{
+	background-color: #404048;
+	border: 0;
+	&:hover, &:active, &:focus{
+		background-color: #36363E !important;
+	}
+}
+.btn-light{
+	background-color: #F56B6B;
+	border: 0;
+	&:hover, &:active, &:focus{
+		background-color: #C55858 !important;
+	}
+}
 
 .wrapper {	
-	margin-top: 80px;
-  margin-bottom: 80px;
+	margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .form-signin {
+	border-radius: 8px;
   max-width: 380px;
   padding: 15px 35px 45px;
   margin: 0 auto;

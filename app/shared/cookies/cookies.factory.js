@@ -8,9 +8,16 @@
 
     function elCookies ($http, $log, $cookies, SERVER_URL) {
         return {
+            getUser: getUser,
             isLoggedIn: isLoggedIn,
+            removeUser: removeUser
         };
-
+        function getUser() {
+            return $cookies.getObject('user');
+        }
+        function removeUser() {
+            $cookies.remove('user');
+        }
         function isLoggedIn () {
             var user = $cookies.getObject('user');
 
