@@ -1,6 +1,111 @@
 @import "../external/bootstrap/less/bootstrap.less";
 @import "../external/font-awesome/less/font-awesome.less";
 
+@-webkit-keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+@keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+
 
 .playlist ul {
 	list-style-type: none;
@@ -11,10 +116,44 @@
 		.header-brand{
 			display: table;
 			img{
-				width: 200px
+				width: 200px;
+				-webkit-transform: translateZ(0);
+				transform: translateZ(0);
+                -webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
+				&:hover{
+					webkit-animation-name: hvr-buzz-out;
+		  			animation-name: hvr-buzz-out;
+					  -webkit-animation-duration: 1.0s;
+					  animation-duration: 1.0s;
+					  -webkit-animation-timing-function: linear;
+					  animation-timing-function: linear;
+					  -webkit-animation-iteration-count: 1;
+					  animation-iteration-count: 1;
+
+				}
 			}
 	}	
 }
+.bg-image{
+	padding: 25px;
+	background-color: #404048;
+	text-align: center;
+	display: block;
+	transition: padding 0.3s;
+	-moz-transition: padding 0.3s; /* Firefox 4 */
+	-webkit-transition: padding 0.3s; /* Safari and Chrome */
+	-o-transition: padding 0.3s; /* Opera */
+	-ms-transition: padding 0.3s; /* IE9 (maybe) */
+	&:hover{
+		padding: 15px;
+	}
+	a{
+		display: table;
+		margin: 0 auto;
+	}
+}
+
 .playlist ul a {
 	cursor: pointer;
 	color: #428bca;
@@ -94,7 +233,22 @@ body{
 	img{
 	    max-width: 350px;
 	    width: 100%;
-	    margin: 0 auto;	
+	    margin: 0 auto;
+	    -webkit-transform: translateZ(0);
+		transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+
+	    &:hover{
+		  -webkit-animation-name: hvr-buzz-out;
+		  animation-name: hvr-buzz-out;
+		  -webkit-animation-duration: 0.8s;
+		  animation-duration: 0.8s;
+		  -webkit-animation-timing-function: linear;
+		  animation-timing-function: linear;
+		  -webkit-animation-iteration-count: 1;
+		  animation-iteration-count: 1;
+	    }
 	}
 }
 .btn.disabled, .btn[disabled], fieldset[disabled] .btn{
@@ -163,3 +317,4 @@ p.error-message{
 	  border-top-right-radius: 0;
 	}
 }
+

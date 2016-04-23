@@ -4,9 +4,9 @@
     angular.module('el.courses', [])
 	.controller('CoursesController', CoursesController);
 
-	CoursesController.$inject = ['CoursesService', '$log'];
+	CoursesController.$inject = ['CoursesService', '$log', 'elCookies'];
 
-	function CoursesController (CoursesService, $log) {
+	function CoursesController (CoursesService, $log, elCookies) {
 		var vm = this;
 		vm.courses = [];
 		vm.listCourses = listCourses;
@@ -17,7 +17,9 @@
 	    	return listCourses();
 	    }
 	    function listCourses() {
-        	return CoursesService.listCourses().then(function(data) {
+	    	var key = elCookies.getUser().key;
+
+        	return CoursesService.listCourses(key).then(function(data) {
             	vm.courses = data;
             	return vm.courses;
         });

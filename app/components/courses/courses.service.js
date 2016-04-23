@@ -11,8 +11,8 @@
         	listCourses: getCourses
     	};
 
-    	function getCourses() {
-    		return $http.get(SERVER_URL + 'api/courses')
+    	function getCourses(token) {
+    		return $http.get(SERVER_URL + 'api/courses?token=' + token)
 	    		.then(getCompleted)
     			.catch(getFailed);
     	}

@@ -1,48 +1,52 @@
 <header ui-header></header>
-<div class="row">
-	<div class="col-sm-12">
-		<h3 class="page-header"><a href="#/cursos"></a> Videos</h3>
-		<div class="videos">
-			<div class="row">
-			  	<div class="col-sm-8">
-			  		<div class="player">
-						<div class="videogular-container">
-						<videogular vg-player-ready="video.onPlayerReady($API)" vg-theme="video.config.theme.url">
-							<vg-media vg-src="video.config.sources"
-							vg-tracks="video.config.tracks" vg-preload="video.config.preload">
-							</vg-media>
+<section class="bg-white">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h3 class="page-header"><a href="#/cursos"></a> Videos</h3>
+				<div class="videos">
+					<div class="row">
+					  	<div class="col-sm-8">
+					  		<div class="player">
+								<div class="videogular-container">
+								<videogular vg-player-ready="video.onPlayerReady($API)" vg-theme="video.config.theme.url">
+									<vg-media vg-src="video.config.sources"
+									vg-tracks="video.config.tracks" vg-preload="video.config.preload">
+									</vg-media>
 
-							<vg-controls>
-								<vg-play-pause-button></vg-play-pause-button>
-								<vg-time-display>{{ currentTime | date:'mm:ss':'+0000' }}</vg-time-display>
-								<vg-scrub-bar>
-									<vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-								</vg-scrub-bar>
-								<vg-time-display>{{ timeLeft | date:'mm:ss':'+0000' }}</vg-time-display>
-								<vg-volume>
-									<vg-mute-button></vg-mute-button>
-									<vg-volume-bar></vg-volume-bar>
-								</vg-volume>
-								<vg-fullscreen-button></vg-fullscreen-button>
-							</vg-controls>
+									<vg-controls>
+										<vg-play-pause-button></vg-play-pause-button>
+										<vg-time-display>{{ currentTime | date:'mm:ss':'+0000' }}</vg-time-display>
+										<vg-scrub-bar>
+											<vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+										</vg-scrub-bar>
+										<vg-time-display>{{ timeLeft | date:'mm:ss':'+0000' }}</vg-time-display>
+										<vg-volume>
+											<vg-mute-button></vg-mute-button>
+											<vg-volume-bar></vg-volume-bar>
+										</vg-volume>
+										<vg-fullscreen-button></vg-fullscreen-button>
+									</vg-controls>
 
-							<vg-overlay-play></vg-overlay-play>
-							<vg-buffering></vg-buffering>
-							<vg-poster vg-url='video.config.plugins.poster'></vg-poster>
-						</videogular>
+									<vg-overlay-play></vg-overlay-play>
+									<vg-buffering></vg-buffering>
+									<vg-poster vg-url='video.config.plugins.poster'></vg-poster>
+								</videogular>
+								</div>
+					  		</div>
 						</div>
-			  		</div>
-				</div>
-				<div class="col-sm-4">
-				    <div class="playlist">
-				      <ul>
-				        <li><a ng-click="video.setVideo(0)">Pale Blue Dot</a></li>
-				        <li><a ng-click="video.setVideo(1)">Big Buck Bunny</a></li>
-				      </ul>
-				    </div>
+						<div class="col-sm-4">
+						    <div class="playlist">
+						      <ul>
+						        <li><a ng-click="video.setVideo(0)">Pale Blue Dot</a></li>
+						        <li><a ng-click="video.setVideo(1)">Big Buck Bunny</a></li>
+						      </ul>
+						    </div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 <footer ui-footer>
