@@ -105,10 +105,33 @@
   }
 }
 
-
+videogular{
+	height: 422px !important;
+	border-radius: 5px;
+}
 
 .playlist ul {
-	list-style-type: none;
+	list-style-type: none;	
+	background-color: #404048;
+	padding: 5px 2px;
+			border-radius: 5px;
+	li{
+		padding: 3px 5px;
+		a{
+			display: block;
+			padding: 10px;
+			color: #fff;
+			border-radius: 5px;
+			&.active{
+				background-color: #F56B6B;
+			}
+			&:hover{
+				color: #fff;
+				text-decoration: none;
+				background-color: #C76464;
+			}
+		}
+	}
 }
 .nav-header{
 	border-bottom: solid 3px #C76464;
