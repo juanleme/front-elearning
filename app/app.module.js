@@ -10,6 +10,7 @@
       'el.courses',
       'el.videos',
       'el.login',
+      'el.register',
 
       //Shared dependency Injection
       'el.header',

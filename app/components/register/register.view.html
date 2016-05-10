@@ -1,0 +1,41 @@
+			<div class="logo">
+				<img src="assets/img/logo.png" alt="WebTricks"class="img-responsive" />
+			</div>
+			<div class="wrapper">
+				<form class="form-signin" name="registerForm" ng-submit="vm.submit()" novalidate>       
+					<h2 class="form-signin-heading">Cadastre agora mesmo!</h2>
+					
+					<input type="text" class="form-control" name="firstname" placeholder="Digite seu nome" ng-model="vm.credentials.firstname" ng-model-options="{ updateOn: 'default blur', debounce: { default: 500, blur: 0 } }" required />
+					<p class="error-message" ng-if="registerForm.firstname.$touched">
+						<span ng-show="registerForm.firstname.$error.required">Campo <b>nome</b> é obrigatório.<br></span>
+					</p>
+					<input type="text" class="form-control" name="lastname" placeholder="Digite seu sobrenome" ng-model="vm.credentials.lastname" ng-model-options="{ updateOn: 'default blur', debounce: { default: 500, blur: 0 } }" required />
+					<p class="error-message" ng-if="registerForm.lastname.$touched">
+						<span ng-show="registerForm.lastname.$error.required">Campo <b>sobrenome</b> é obrigatório.<br></span>
+					</p>
+					<input type="text" class="form-control" name="email" placeholder="Digite seu e-mail" ng-model="vm.credentials.email" ng-model-options="{ updateOn: 'default blur', debounce: { default: 500, blur: 0 } }" required />
+					<p class="error-message" ng-if="registerForm.email.$touched">
+						<span ng-show="registerForm.email.$error.email">Endereço de e-mail inválido.<br></span>
+						<span ng-show="registerForm.email.$error.required">Campo <b>email</b> é obrigatório.<br></span>
+					</p>
+					<input type="password" minlength="3" class="form-control" name="password" placeholder="Digite sua senha" ng-model="vm.credentials.password" required/>
+					<p class="error-message" ng-if="registerForm.password.$touched">
+						<span ng-show="registerForm.password.$error.minlength">A senha deve ter no mínimo 3 caracteres.<br></span>
+						<span ng-show="registerForm.password.$error.required">Campo <b>senha</b> é obrigatório.<br></span>
+					</p>
+					<input type="password" minlength="3" class="form-control" name="password_confirmation" placeholder="Digite novamente sua senha" ng-model="vm.credentials.password_confirmation" required/>
+					<p class="error-message" ng-if="registerForm.password_confirmation.$touched">
+						<span ng-show="registerForm.password_confirmation.$error.minlength">A senha deve ter no mínimo 3 caracteres.<br></span>
+						<span ng-show="registerForm.password_confirmation.$error.required">Campo <b>confirmar senha</b> é obrigatório.<br></span>
+					</p>
+				
+					<button class="btn btn-lg btn-primary btn-block btn-light" type="submit" ng-disabled="registerForm.$pristine || registerForm.$invalid">CADASTRAR</button>   
+					<a class="btn btn-lg btn-primary btn-block btn-common" href="#/login">Voltar</a>   
+				</form>
+			</div>
+			<div>
+			    <p class="license">The MIT License (MIT) 2016 &copy; Juan Pinheiro</p>
+			</div>
+		</div>
+	</div>
+</div>

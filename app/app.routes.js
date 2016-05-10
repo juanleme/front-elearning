@@ -14,6 +14,17 @@
           templateUrl: 'app/components/login/login.view.html',
           controller: 'LoginController',
           controllerAs: 'vm',
+          onEnter: function($state, elCookies){          
+            if(elCookies.isLoggedIn()){
+              $state.go('courses');
+            }
+          }
+        })     
+        .state('register', {
+          url: '/cadastrar',
+          templateUrl: 'app/components/register/register.view.html',
+          controller: 'RegisterController',
+          controllerAs: 'vm',
           onEnter: function($state, elCookies){            
             if(elCookies.isLoggedIn()){
               $state.go('courses');

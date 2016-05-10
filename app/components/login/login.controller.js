@@ -19,7 +19,6 @@
 		function submit () {
 			login(vm.credentials);
 		}
-
 	    function login(credentials) {
         	return LoginService.login(credentials).then(function(data) {
         		if(typeof data === 'object'){

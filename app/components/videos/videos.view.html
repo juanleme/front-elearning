@@ -34,11 +34,12 @@
 									</videogular>
 								</div>
 					  		</div>
+					  		<p><br>Os vídeos foram originalmente produzidos por <a href="https://www.youtube.com/channel/UCZZ0NTtOgsLIT4Skr6GUpAw"><b>Node Studio Treinamentos &reg;</b></a> e são apresentados por <b>Rodrigo Oliveira</b>. O conteúdo foi incluído apenas para exeplificar o uso da aplicação.</p>
 						</div>
 						<div class="col-sm-4">
 						    <div class="playlist">
 						      <ul>
-						        <li ng-repeat="v in video.videos"><a ng-click="video.setVideo($index)">{{ v.title }}</a></li>
+						        <li ng-repeat="v in video.videos"><a ng-click="video.setVideo($index)"><i class="fa fa-video-camera" aria-hidden="true"></i> &nbsp;{{ v.title }}</a></li>
 						      </ul>
 						    </div>
 						</div>
