@@ -12,13 +12,12 @@
         };
 
         function register (data) {
-            return $http.post(SERVER_URL + 'api/users/auth', data)
+            return $http.post(SERVER_URL + 'api/users', data)
                 .then(getStatus)
                 .catch(getFailed);
         }
 
         function getStatus (response) {
-            console.log(response);
             return response.status;
         }
         function getFailed (error) {

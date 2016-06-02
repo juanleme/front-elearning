@@ -4,7 +4,12 @@
 			<div class="wrapper">
 				<form class="form-signin" name="registerForm" ng-submit="vm.submit()" novalidate>       
 					<h2 class="form-signin-heading">Cadastre agora mesmo!</h2>
-					
+					<p class="error-message">
+						<span>{{ vm.err }}</span>
+					</p>
+					<div class="alert alert-success" ng-if="vm.suc">
+					  {{ vm.suc }}
+					</div>
 					<input type="text" class="form-control" name="firstname" placeholder="Digite seu nome" ng-model="vm.credentials.firstname" ng-model-options="{ updateOn: 'default blur', debounce: { default: 500, blur: 0 } }" required />
 					<p class="error-message" ng-if="registerForm.firstname.$touched">
 						<span ng-show="registerForm.firstname.$error.required">Campo <b>nome</b> é obrigatório.<br></span>
